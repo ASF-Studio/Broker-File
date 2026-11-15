@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -17,16 +18,10 @@ button:active{background:#e5e5e5!important;color:#333!important}
 .app{max-width:650px;margin:auto}
 
 header{
- position:sticky;
- top:0;
- z-index:18;
- display:flex;
- justify-content:flex-end;
- align-items:center;
- margin:-14px -14px 18px;
- padding:12px 14px;
- background:#fff;
- border-bottom:1px solid #eee;
+ position:sticky;top:0;z-index:18;
+ display:flex;justify-content:flex-end;align-items:center;
+ margin:-14px -14px 18px;padding:12px 14px;
+ background:#fff;border-bottom:1px solid #eee;
 }
 
 h2{font-size:20px;margin:0}
@@ -72,61 +67,35 @@ h2{font-size:20px;margin:0}
  background:transparent;color:#666;padding:0;width:29px;height:29px;min-width:29px;
  display:inline-flex;align-items:center;justify-content:center;border-radius:6px
 }
-
-.star{
- width:23px;height:23px;min-width:23px;
- font-size:16px;color:#aaa
-}
+.star{width:23px;height:23px;min-width:23px;font-size:16px;color:#aaa}
 .star.on{color:#c99a00}
-
 .del{font-size:19px;color:#888}
 .arrow svg,.eye svg{width:18px;height:18px}
 .arrow:hover,.eye:hover{background:#f3f3f3}
 
 .person-tools{
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
- gap:0;
- width:23px;
- min-width:23px;
- flex-shrink:0;
+ display:flex;flex-direction:column;align-items:center;justify-content:center;
+ gap:0;width:23px;min-width:23px;flex-shrink:0
 }
-
 .edit-name-btn{
- background:transparent;color:#999;padding:0;
- width:23px;height:22px;min-width:23px;
- display:inline-flex;align-items:center;justify-content:center;
- border-radius:6px
+ background:transparent;color:#999;padding:0;width:23px;height:22px;min-width:23px;
+ display:inline-flex;align-items:center;justify-content:center;border-radius:6px
 }
 .edit-name-btn:hover{background:#f3f3f3;color:#555}
 .edit-name-btn svg{width:13px;height:13px}
-
-.person-tools .star{
- width:23px;height:22px;min-width:23px;
- padding:0;
- font-size:16px;
-}
+.person-tools .star{width:23px;height:22px;min-width:23px;padding:0;font-size:16px}
 
 .name-edit-row{
- display:flex;
- flex-direction:column;
- align-items:stretch;
- gap:6px;
- min-width:0;
- width:100%;
+ display:flex;flex-direction:column;align-items:stretch;gap:6px;min-width:0;width:100%
 }
 .name-edit-input{
- width:100%;min-width:0;padding:8px;
- border:1px solid #ddd;border-radius:6px;outline:none;
- font-size:13px;background:#fff
+ width:100%;min-width:0;padding:8px;border:1px solid #ddd;border-radius:6px;
+ outline:none;font-size:13px;background:#fff
 }
 .name-edit-input:focus{border-color:#aaa}
 .name-edit-done{
- background:#edf5ef;color:#39754a;
- padding:7px 12px;font-size:12px;white-space:nowrap;
- width:100%
+ background:#edf5ef;color:#39754a;padding:7px 12px;font-size:12px;
+ white-space:nowrap;width:100%
 }
 
 .call{
@@ -156,9 +125,27 @@ h2{font-size:20px;margin:0}
 .status-list button:hover{background:#f6f6f6}
 
 .children{margin:10px 0 0;padding-right:12px;border-right:1px solid #e8e8e8}
-.child{display:flex;align-items:center;gap:5px;padding:9px 0;border-bottom:1px solid #f1f1f1}
+.child{
+ display:flex;align-items:center;gap:5px;padding:9px 0;
+ border-bottom:1px solid #f1f1f1
+}
 .child .name{font-size:13px}
 .child-add{font-size:12px;margin-top:8px;background:#f5f5f5;color:#444}
+
+/* تعديل الاسم التابع */
+.child-edit-btn{
+ background:transparent;color:#999;padding:0;width:27px;height:27px;min-width:27px;
+ display:inline-flex;align-items:center;justify-content:center;border-radius:6px
+}
+.child-edit-btn:hover{background:#f3f3f3;color:#555}
+.child-edit-btn svg{width:14px;height:14px}
+.child-edit-row{display:flex;flex-direction:column;gap:6px;width:100%;min-width:0}
+.child-edit-row input{
+ width:100%;min-width:0;padding:8px;border:1px solid #ddd;border-radius:6px;
+ outline:none;font-size:12px;background:#fff
+}
+.child-edit-row input:focus{border-color:#aaa}
+.child-edit-done{background:#edf5ef;color:#39754a;width:100%;font-size:12px}
 
 .form{display:none;background:#fff;padding:12px;border:1px solid #eee;border-radius:8px;margin:10px 0}
 .form.show{display:block}
@@ -173,16 +160,12 @@ h2{font-size:20px;margin:0}
 .filters{display:flex;gap:7px;flex-wrap:wrap}
 .filter-btn{
  background:#f5f5f5;color:#666;border:1px solid #eee;
- padding:8px 10px;border-radius:8px;font-size:12px;
- white-space:nowrap
+ padding:8px 10px;border-radius:8px;font-size:12px;white-space:nowrap
 }
 .filter-btn.active{background:#e8e8e8;color:#222;border-color:#ddd;font-weight:bold}
 .filter-btn .count{margin-right:3px;color:#999}
 .filter-btn.active .count{color:#555}
-.filter-empty{
- text-align:center;color:#999;padding:22px 10px;
- background:#fafafa;border-radius:8px;font-size:13px
-}
+.filter-empty{text-align:center;color:#999;padding:22px 10px;background:#fafafa;border-radius:8px;font-size:13px}
 
 .search-wrap{position:relative;margin:0 0 14px}
 .search-row{display:flex;gap:7px}
@@ -245,32 +228,13 @@ h2{font-size:20px;margin:0}
 .auth-switch{background:#f5f5f5;color:#444}
 #appScreen{display:none}
 #userBar{font-size:12px;color:#888;display:flex;align-items:center;gap:8px}
+#userBar > button:not(.top-add-group){font-size:11px;padding:6px 9px;background:#f3f3f3;color:#555}
 
-/* تنسيق زر الخروج فقط */
-#userBar > button:not(.top-add-group){
- font-size:11px;
- padding:6px 9px;
- background:#f3f3f3;
- color:#555;
-}
-
-/* زر إضافة المجموعة العلوي - رمادي وصغير */
 .top-add-group{
- display:flex;
- align-items:center;
- justify-content:center;
- gap:5px;
- min-width:115px;
- padding:8px 9px;
- background:#e9e9e9;
- color:#555;
- font-size:11px;
- font-weight:bold;
- border-radius:8px;
- margin-left:8px;
- white-space:nowrap;
+ display:flex;align-items:center;justify-content:center;gap:5px;min-width:115px;
+ padding:8px 9px;background:#e9e9e9;color:#555;font-size:11px;font-weight:bold;
+ border-radius:8px;margin-left:8px;white-space:nowrap
 }
-
 .top-add-group:hover{background:#dedede}
 .top-add-group svg{width:16px;height:16px;flex-shrink:0}
 
@@ -282,12 +246,7 @@ h2{font-size:20px;margin:0}
  body{padding:11px}
  header{margin:-11px -11px 16px;padding:11px}
  #userBar{gap:6px}
- .top-add-group{
-  min-width:105px;
-  padding:7px 8px;
-  font-size:10px;
-  gap:4px;
- }
+ .top-add-group{min-width:105px;padding:7px 8px;font-size:10px;gap:4px}
  .top-add-group svg{width:15px;height:15px}
  .line{gap:4px}
  .status{font-size:10px;padding:5px}
@@ -325,12 +284,9 @@ h2{font-size:20px;margin:0}
  <header>
   <div id="userBar">
    <span id="userEmail"></span>
-
    <button onclick="askLogout()">خروج</button>
-
    <button class="top-add-group" onclick="openGroupForm()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-     stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
      <circle cx="9" cy="7" r="3"/>
      <path d="M3 20v-2a6 6 0 0 1 12 0v2"/>
      <path d="M17 4.5a3 3 0 0 1 0 5.8"/>
@@ -341,10 +297,7 @@ h2{font-size:20px;margin:0}
   </div>
  </header>
 
- <div class="group-title">
-  <h3 id="groupTitle"></h3>
- </div>
-
+ <div class="group-title"><h3 id="groupTitle"></h3></div>
  <div class="groups" id="groups"></div>
 
  <div class="search-wrap">
@@ -359,8 +312,7 @@ h2{font-size:20px;margin:0}
 
  <div class="form" id="personForm">
   <input id="personName" placeholder="اسم الشخص">
-  <input id="personPhone" placeholder="رقم الجوال"
-   type="tel" inputmode="numeric" pattern="[0-9]*"
+  <input id="personPhone" placeholder="رقم الجوال" type="tel" inputmode="numeric" pattern="[0-9]*"
    oninput="this.value=this.value.replace(/[^0-9]/g,'')">
   <div class="actions">
    <button class="save" onclick="savePerson()">إضافة</button>
@@ -368,10 +320,7 @@ h2{font-size:20px;margin:0}
   </div>
  </div>
 
- <div class="filter-wrap" id="filterWrap">
-  <div class="filters" id="filters"></div>
- </div>
-
+ <div class="filter-wrap" id="filterWrap"><div class="filters" id="filters"></div></div>
  <div id="people"></div>
 </section>
 
@@ -418,20 +367,14 @@ let deleteGroupId="";
 let pendingCallId="";
 let callPageWasHidden=false;
 let callResultShown=false;
+let pendingCallIsChild=false;
 
 let editingPersonId="";
+let editingChildId="";
 let groupFilters={};
 
-function getGroupFilter(groupId){
- return groupFilters[groupId]??"all";
-}
-
-function setGroupFilter(filter){
- if(!active)return;
- groupFilters[active]=filter;
- render();
-}
-
+function getGroupFilter(groupId){return groupFilters[groupId]??"all"}
+function setGroupFilter(filter){if(!active)return;groupFilters[active]=filter;render()}
 function uid(){return crypto.randomUUID()}
 function newGroup(name){return{id:uid(),name,people:[]}}
 
@@ -469,7 +412,6 @@ function toggleAuthMode(){
 async function handleAuth(){
  const email=document.getElementById("email").value.trim();
  const password=document.getElementById("password").value;
-
  if(!email||!password){showMessage("اكتب الإيميل وكلمة المرور.",true);return}
  if(password.length<6){showMessage("كلمة المرور لازم تكون 6 أحرف على الأقل.",true);return}
 
@@ -481,20 +423,15 @@ async function handleAuth(){
   let result=isSignup?
    await db.auth.signUp({email,password}):
    await db.auth.signInWithPassword({email,password});
-
   if(result.error)throw result.error;
-
   if(isSignup&&!result.data.session){
    showMessage("تم إنشاء الحساب. راجع بريدك الإلكتروني لتأكيد الحساب، ثم سجّل الدخول.");
    return;
   }
-
   if(result.data.session)await enterApp(result.data.session.user);
  }catch(e){
   showMessage(e.message||"صار خطأ أثناء تسجيل الدخول.",true);
- }finally{
-  btn.disabled=false;
- }
+ }finally{btn.disabled=false}
 }
 
 function askLogout(){
@@ -508,20 +445,13 @@ function askLogout(){
  `);
 }
 
-async function confirmLogout(){
- closeModal();
- await logout();
-}
+async function confirmLogout(){closeModal();await logout()}
 
 async function logout(){
  await db.auth.signOut();
- currentUser=null;
- groups=[];
- active="";
- groupFilters={};
- personFormGroupId="";
- pendingCallId="";
- editingPersonId="";
+ currentUser=null;groups=[];active="";groupFilters={};
+ personFormGroupId="";pendingCallId="";editingPersonId="";editingChildId="";
+ pendingCallIsChild=false;
  document.getElementById("appScreen").style.display="none";
  document.getElementById("authScreen").style.display="block";
  document.getElementById("password").value="";
@@ -538,29 +468,19 @@ function getLocalData(){
 
 function normalizeLocal(data){
  const idMap=new Map();
- const makeId=old=>{
-  if(!idMap.has(old))idMap.set(old,uid());
-  return idMap.get(old);
- };
+ const makeId=old=>{if(!idMap.has(old))idMap.set(old,uid());return idMap.get(old)};
 
  groups=(data.groups||[]).map(g=>({
   id:makeId(g.id||uid()),
   name:g.name||"مجموعة",
   people:(g.people||[]).map(p=>({
-   id:makeId(p.id||uid()),
-   name:p.name||"",
-   phone:p.phone||"",
-   status:Number(p.status)||0,
-   favorite:!!p.favorite,
+   id:makeId(p.id||uid()),name:p.name||"",phone:p.phone||"",
+   status:Number(p.status)||0,favorite:!!p.favorite,
    children:(p.children||[]).map(c=>({
-    id:makeId(c.id||uid()),
-    name:c.name||"",
-    phone:c.phone||"",
-    status:Number(c.status)||0
+    id:makeId(c.id||uid()),name:c.name||"",phone:c.phone||"",status:Number(c.status)||0
    }))
   }))
  }));
-
  active=idMap.get(data.active)||groups[0]?.id||"";
 }
 
@@ -570,7 +490,6 @@ async function enterApp(user){
  document.getElementById("appScreen").style.display="block";
  document.getElementById("busy").style.display="block";
  document.getElementById("userEmail").textContent=user.email||"حسابي";
-
  try{
   await loadCloudData();
   document.getElementById("busy").style.display="none";
@@ -584,26 +503,18 @@ async function enterApp(user){
 
 async function loadCloudData(){
  const owner=currentUser.id;
-
  const [gRes,pRes,cRes]=await Promise.all([
   db.from("dc_groups").select("*").eq("owner_id",owner).order("created_at"),
   db.from("dc_people").select("*").eq("owner_id",owner),
   db.from("dc_children").select("*").eq("owner_id",owner)
  ]);
-
  if(gRes.error)throw gRes.error;
  if(pRes.error)throw pRes.error;
  if(cRes.error)throw cRes.error;
 
  if(!gRes.data.length){
   const local=getLocalData();
-
-  if(local&&local.groups?.length){
-   normalizeLocal(local);
-   await saveCloudNow();
-   return;
-  }
-
+  if(local&&local.groups?.length){normalizeLocal(local);await saveCloudNow();return}
   groups=[newGroup("المجموعة الأولى")];
   active=groups[0].id;
   await saveCloudNow();
@@ -612,44 +523,27 @@ async function loadCloudData(){
 
  const people=pRes.data;
  const children=cRes.data;
-
  groups=gRes.data.map(g=>({
-  id:g.id,
-  name:g.name,
+  id:g.id,name:g.name,
   people:people.filter(p=>p.group_id===g.id).map(p=>({
-   id:p.id,
-   name:p.name,
-   phone:p.phone,
-   status:p.status,
-   favorite:p.favorite,
+   id:p.id,name:p.name,phone:p.phone,status:p.status,favorite:p.favorite,
    children:children.filter(c=>c.person_id===p.id).map(c=>({
-    id:c.id,
-    name:c.name,
-    phone:c.phone,
-    status:c.status
+    id:c.id,name:c.name,phone:c.phone,status:c.status
    }))
   }))
  }));
-
  active=groups[0]?.id||"";
 }
 
-function snapshot(){
- return JSON.parse(JSON.stringify({groups,active}));
-}
+function snapshot(){return JSON.parse(JSON.stringify({groups,active}))}
 
 function persist(){
  if(!currentUser)return;
  const data=snapshot();
-
- saveQueue=saveQueue.then(()=>saveSnapshot(data)).catch(e=>{
-  console.error("Save error:",e);
- });
+ saveQueue=saveQueue.then(()=>saveSnapshot(data)).catch(e=>console.error("Save error:",e));
 }
 
-async function saveCloudNow(){
- await saveSnapshot(snapshot());
-}
+async function saveCloudNow(){await saveSnapshot(snapshot())}
 
 async function saveSnapshot(data){
  const owner=currentUser.id;
@@ -679,11 +573,9 @@ async function saveSnapshot(data){
   const r=await db.from("dc_children").upsert(childRows);
   if(r.error)throw r.error;
  }
-
  await removeMissing("dc_children",childRows.map(x=>x.id),owner);
  await removeMissing("dc_people",peopleRows.map(x=>x.id),owner);
  await removeMissing("dc_groups",groupRows.map(x=>x.id),owner);
-
  localStorage.setItem(LOCAL_KEY,JSON.stringify(data));
 }
 
@@ -694,9 +586,7 @@ async function removeMissing(table,ids,owner){
  if(r.error)throw r.error;
 }
 
-function current(){
- return groups.find(g=>g.id===active)||groups[0];
-}
+function current(){return groups.find(g=>g.id===active)||groups[0]}
 
 function syncPersonFormVisibility(){
  const form=document.getElementById("personForm");
@@ -705,58 +595,65 @@ function syncPersonFormVisibility(){
 }
 
 function startEditPerson(id){
- editingPersonId=id;
- render();
-
+ editingPersonId=id;render();
  const nameInput=document.getElementById("editName-"+id);
- if(nameInput){
-  nameInput.focus();
-  nameInput.select();
- }
+ if(nameInput){nameInput.focus();nameInput.select()}
 }
 
 function finishEditPerson(id){
  const nameInput=document.getElementById("editName-"+id);
  const phoneInput=document.getElementById("editPhone-"+id);
+ if(!nameInput||!phoneInput)return;
+ const name=nameInput.value.trim();
+ const phone=phoneInput.value.trim();
+ if(!name){alert("اكتب الاسم أولاً");nameInput.focus();return}
+ if(!phone){alert("اكتب رقم الجوال");phoneInput.focus();return}
+ if(!/^[0-9]+$/.test(phone)){alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");phoneInput.focus();return}
 
+ let found=false;
+ for(const g of groups){
+  const p=g.people.find(x=>x.id===id);
+  if(p){p.name=name;p.phone=phone;found=true;break}
+ }
+ if(!found)return;
+ editingPersonId="";
+ render();persist();
+}
+
+/* تعديل الاسم التابع ورقمه */
+function startEditChild(id){
+ editingChildId=id;
+ render();
+ const input=document.getElementById("editChildName-"+id);
+ if(input){input.focus();input.select()}
+}
+
+function finishEditChild(id){
+ const nameInput=document.getElementById("editChildName-"+id);
+ const phoneInput=document.getElementById("editChildPhone-"+id);
  if(!nameInput||!phoneInput)return;
 
  const name=nameInput.value.trim();
  const phone=phoneInput.value.trim();
 
- if(!name){
-  alert("اكتب الاسم أولاً");
-  nameInput.focus();
-  return;
- }
-
- if(!phone){
-  alert("اكتب رقم الجوال");
-  phoneInput.focus();
-  return;
- }
-
+ if(!name){alert("اكتب الاسم أولاً");nameInput.focus();return}
+ if(!phone){alert("اكتب رقم الجوال");phoneInput.focus();return}
  if(!/^[0-9]+$/.test(phone)){
   alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");
-  phoneInput.focus();
-  return;
+  phoneInput.focus();return;
  }
 
  let found=false;
-
  for(const g of groups){
-  const p=g.people.find(x=>x.id===id);
-  if(p){
-   p.name=name;
-   p.phone=phone;
-   found=true;
-   break;
+  for(const p of g.people){
+   const child=p.children.find(c=>c.id===id);
+   if(child){child.name=name;child.phone=phone;found=true;break}
   }
+  if(found)break;
  }
-
  if(!found)return;
 
- editingPersonId="";
+ editingChildId="";
  render();
  persist();
 }
@@ -774,24 +671,18 @@ function renderFilters(){
   wait:people.filter(p=>Number(p.status)===2).length,
   none:people.filter(p=>Number(p.status)===0).length
  };
-
  const selected=getGroupFilter(group.id);
-
  const options=[
   {key:"all",label:"الكل",count:counts.all},
   {key:"done",label:"تم الرد",count:counts.done},
   {key:"wait",label:"لم يرد",count:counts.wait},
   {key:"none",label:"لم يتم التواصل",count:counts.none}
  ];
-
  filters.innerHTML=options.map(option=>`
-  <button class="filter-btn ${selected===option.key?"active":""}"
-   onclick="setGroupFilter('${option.key}')">
-   ${option.label}
-   <span class="count">(${option.count})</span>
+  <button class="filter-btn ${selected===option.key?"active":""}" onclick="setGroupFilter('${option.key}')">
+   ${option.label} <span class="count">(${option.count})</span>
   </button>
  `).join("");
-
  wrap.style.display=people.length?"block":"none";
 }
 
@@ -799,41 +690,31 @@ function render(){
  if(!groups.length)groups=[newGroup("المجموعة الأولى")];
  if(!groups.some(g=>g.id===active))active=groups[0].id;
 
- document.getElementById("groups").innerHTML=
-  groups.map(g=>`
-   <div class="group-tab-wrap ${g.id===active?"active":""}">
-    <button class="add-person-circle" onclick="addPersonToGroup('${g.id}')"
-     title="إضافة شخص" aria-label="إضافة شخص">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-      <circle cx="10" cy="7" r="4"/>
-      <path d="M19 8v6M16 11h6"/>
-     </svg>
-    </button>
-
-    <button class="tab" onclick="selectGroup('${g.id}')">${safe(g.name)}</button>
-
-    <button class="group-delete-icon" onclick="askDeleteGroup('${g.id}')"
-     title="حذف المجموعة" aria-label="حذف المجموعة">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6"/>
-      <path d="M10 11v5M14 11v5"/>
-     </svg>
-    </button>
-   </div>
-  `).join("");
+ document.getElementById("groups").innerHTML=groups.map(g=>`
+  <div class="group-tab-wrap ${g.id===active?"active":""}">
+   <button class="add-person-circle" onclick="addPersonToGroup('${g.id}')" title="إضافة شخص" aria-label="إضافة شخص">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+     <circle cx="10" cy="7" r="4"/>
+     <path d="M19 8v6M16 11h6"/>
+    </svg>
+   </button>
+   <button class="tab" onclick="selectGroup('${g.id}')">${safe(g.name)}</button>
+   <button class="group-delete-icon" onclick="askDeleteGroup('${g.id}')" title="حذف المجموعة" aria-label="حذف المجموعة">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+     <path d="M3 6h18M8 6V4h8v2m3 0-1 14H6L5 6"/>
+     <path d="M10 11v5M14 11v5"/>
+    </svg>
+   </button>
+  </div>
+ `).join("");
 
  document.getElementById("groupTitle").textContent=current().name;
  syncPersonFormVisibility();
-
  renderFilters();
 
  const selectedFilter=getGroupFilter(current().id);
-
  let list=[...current().people];
-
  if(selectedFilter==="done")list=list.filter(p=>Number(p.status)===1);
  if(selectedFilter==="wait")list=list.filter(p=>Number(p.status)===2);
  if(selectedFilter==="none")list=list.filter(p=>Number(p.status)===0);
@@ -846,111 +727,107 @@ function render(){
  });
 
  const area=document.getElementById("people");
-
  if(!list.length){
   const hasPeople=current().people.length>0;
   area.innerHTML=hasPeople?
    '<div class="filter-empty">ما فيه أشخاص بهذه الحالة</div>':
    '<div class="empty">ما فيه أشخاص هنا</div>';
-  renderSearchPanel();
-  return;
+  renderSearchPanel();return;
  }
 
  area.innerHTML=list.map(p=>`
- <div class="person ${highlightPersonId===p.id?"search-highlight":""}" id="person-${p.id}">
-  <div class="line">
+  <div class="person ${highlightPersonId===p.id?"search-highlight":""}" id="person-${p.id}">
+   <div class="line">
+    <div class="person-tools">
+     <button class="edit-name-btn" onclick="startEditPerson('${p.id}')" title="تعديل الاسم والرقم" aria-label="تعديل الاسم والرقم">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+       <path d="m16 4 4 4M4 20l4-.8L19 8a2.1 2.1 0 0 0-3-3L5 16z"/>
+      </svg>
+     </button>
+     <button class="star ${p.favorite?"on":""}" onclick="favorite('${p.id}')">★</button>
+    </div>
 
-   <div class="person-tools">
-    <button class="edit-name-btn" onclick="startEditPerson('${p.id}')"
-     title="تعديل الاسم والرقم" aria-label="تعديل الاسم والرقم">
-     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-      <path d="m16 4 4 4M4 20l4-.8L19 8a2.1 2.1 0 0 0-3-3L5 16z"/>
-     </svg>
-    </button>
+    <div class="info">
+     ${editingPersonId===p.id?`
+      <div class="name-edit-row">
+       <input class="name-edit-input" id="editName-${p.id}" value="${safe(p.name)}" placeholder="اسم الشخص"
+        onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('editPhone-${p.id}').focus()}">
+       <input class="name-edit-input" id="editPhone-${p.id}" value="${safe(p.phone)}" placeholder="رقم الجوال" type="tel" inputmode="numeric"
+        oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+        onkeydown="if(event.key==='Enter'){event.preventDefault();finishEditPerson('${p.id}')}">
+       <button class="name-edit-done" onclick="finishEditPerson('${p.id}')">تم</button>
+      </div>
+     `:`
+      <div class="name" onclick="startEditPerson('${p.id}')" style="cursor:pointer">${privateText(p.id,p.name)}</div>
+      <div class="phone">${privateText(p.id,p.phone)}</div>
+     `}
+    </div>
 
-    <button class="star ${p.favorite?"on":""}" onclick="favorite('${p.id}')">★</button>
+    ${statusButton(p.id,p.status,false)}
+    <button class="arrow" onclick="toggleChildren('${p.id}')" title="عرض الأسماء التابعة">${arrowIcon(expanded[p.id])}</button>
+    ${callButton(p.id,p.phone,false)}
+    ${eyeButton(p.id)}
+    <button class="del" onclick="askDeletePerson('${p.id}')">×</button>
    </div>
 
-   <div class="info">
-    ${editingPersonId===p.id?`
-     <div class="name-edit-row">
-      <input class="name-edit-input" id="editName-${p.id}"
-       value="${safe(p.name)}"
-       placeholder="اسم الشخص"
-       onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('editPhone-${p.id}').focus()}">
+   ${expanded[p.id]?`
+    <div class="children">
+     ${p.children.map(c=>`
+      <div class="child">
+       <button class="child-edit-btn" onclick="startEditChild('${c.id}')" title="تعديل الاسم والرقم" aria-label="تعديل الاسم والرقم">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+         <path d="m16 4 4 4M4 20l4-.8L19 8a2.1 2.1 0 0 0-3-3L5 16z"/>
+        </svg>
+       </button>
 
-      <input class="name-edit-input" id="editPhone-${p.id}"
-       value="${safe(p.phone)}"
-       placeholder="رقم الجوال"
-       type="tel"
-       inputmode="numeric"
-       oninput="this.value=this.value.replace(/[^0-9]/g,'')"
-       onkeydown="if(event.key==='Enter'){event.preventDefault();finishEditPerson('${p.id}')}">
+       <div class="info">
+        ${editingChildId===c.id?`
+         <div class="child-edit-row">
+          <input id="editChildName-${c.id}" value="${safe(c.name)}" placeholder="اسم الشخص"
+           onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('editChildPhone-${c.id}').focus()}">
+          <input id="editChildPhone-${c.id}" value="${safe(c.phone)}" placeholder="رقم الجوال" type="tel" inputmode="numeric"
+           oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+           onkeydown="if(event.key==='Enter'){event.preventDefault();finishEditChild('${c.id}')}">
+          <button class="child-edit-done" onclick="finishEditChild('${c.id}')">تم</button>
+         </div>
+        `:`
+         <div class="name" onclick="startEditChild('${c.id}')" style="cursor:pointer">${privateText(c.id,c.name)}</div>
+         <div class="phone">${privateText(c.id,c.phone)}</div>
+        `}
+       </div>
 
-      <button class="name-edit-done" onclick="finishEditPerson('${p.id}')">تم</button>
+       ${statusButton(c.id,c.status,true)}
+       ${callButton(c.id,c.phone,true)}
+       ${eyeButton(c.id)}
+       <button class="del" onclick="askDeleteChild('${c.id}')">×</button>
+      </div>
+     `).join("")}
+
+     <button class="child-add" onclick="openChildForm('${p.id}')">＋ إضافة اسم</button>
+     <div class="form" id="childForm-${p.id}">
+      <input id="childName-${p.id}" placeholder="اسم الشخص">
+      <input id="childPhone-${p.id}" placeholder="رقم الجوال" type="tel" inputmode="numeric" pattern="[0-9]*"
+       oninput="this.value=this.value.replace(/[^0-9]/g,'')">
+      <div class="actions">
+       <button class="save" onclick="saveChild('${p.id}')">إضافة</button>
+       <button class="cancel" onclick="closeChildForm('${p.id}')">إلغاء</button>
+      </div>
      </div>
-    `:`
-     <div class="name" onclick="startEditPerson('${p.id}')" style="cursor:pointer">${privateText(p.id,p.name)}</div>
-     <div class="phone">${privateText(p.id,p.phone)}</div>
-    `}
-   </div>
-
-   ${statusButton(p.id,p.status,false)}
-
-   <button class="arrow" onclick="toggleChildren('${p.id}')" title="عرض الأسماء التابعة">
-    ${arrowIcon(expanded[p.id])}
-   </button>
-
-   ${callButton(p.id,p.phone)}
-   ${eyeButton(p.id)}
-
-   <button class="del" onclick="askDeletePerson('${p.id}')">×</button>
+    </div>
+   `:""}
   </div>
-
-  ${expanded[p.id]?`
-  <div class="children">
-   ${p.children.map(c=>`
-    <div class="child">
-     <div class="info">
-      <div class="name">${privateText(c.id,c.name)}</div>
-      <div class="phone">${privateText(c.id,c.phone)}</div>
-     </div>
-     ${statusButton(c.id,c.status,true)}
-     ${eyeButton(c.id)}
-     <button class="del" onclick="askDeleteChild('${c.id}')">×</button>
-    </div>
-   `).join("")}
-
-   <button class="child-add" onclick="openChildForm('${p.id}')">＋ إضافة اسم</button>
-
-   <div class="form" id="childForm-${p.id}">
-    <input id="childName-${p.id}" placeholder="اسم الشخص">
-    <input id="childPhone-${p.id}" placeholder="رقم الجوال"
-     type="tel" inputmode="numeric" pattern="[0-9]*"
-     oninput="this.value=this.value.replace(/[^0-9]/g,'')">
-    <div class="actions">
-     <button class="save" onclick="saveChild('${p.id}')">إضافة</button>
-     <button class="cancel" onclick="closeChildForm('${p.id}')">إلغاء</button>
-    </div>
-   </div>
-  </div>`:""}
- </div>
  `).join("");
 
  renderSearchPanel();
 }
 
 function arrowIcon(isOpen){
- return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+ return `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <path d="${isOpen?"m6 15 6-6 6 6":"m6 9 6 6 6-6"}"/>
  </svg>`;
 }
 
-function searchHistoryKey(){
- return "dcSearchHistory:"+((currentUser&&currentUser.id)||"guest");
-}
+function searchHistoryKey(){return "dcSearchHistory:"+((currentUser&&currentUser.id)||"guest")}
 
 function getSearchHistory(){
  try{
@@ -959,51 +836,31 @@ function getSearchHistory(){
  }catch(e){return []}
 }
 
-function saveSearchHistory(items){
- localStorage.setItem(searchHistoryKey(),JSON.stringify(items));
-}
+function saveSearchHistory(items){localStorage.setItem(searchHistoryKey(),JSON.stringify(items))}
 
-function showSearchPanel(){
- searchFocused=true;
- renderSearchPanel();
-}
+function showSearchPanel(){searchFocused=true;renderSearchPanel()}
 
 function renderSearchPanel(){
  const panel=document.getElementById("searchPanel");
  const input=document.getElementById("searchInput");
  if(!panel||!input)return;
-
  const query=input.value.trim().toLowerCase();
 
- if(!searchFocused){
-  panel.classList.remove("show");
-  return;
- }
+ if(!searchFocused){panel.classList.remove("show");return}
 
  if(query){
   searchResults=[];
-
   groups.forEach(g=>g.people.forEach(p=>{
    const parentName=String(p.name||"").toLowerCase();
    const parentPhone=String(p.phone||"").toLowerCase();
-   const parentMatch=parentName.includes(query)||parentPhone.includes(query);
-
-   if(parentMatch){
-    searchResults.push({
-     groupId:g.id,personId:p.id,resultName:p.name,resultPhone:p.phone,
-     groupName:g.name,childId:"",isChild:false
-    });
+   if(parentName.includes(query)||parentPhone.includes(query)){
+    searchResults.push({groupId:g.id,personId:p.id,resultName:p.name,resultPhone:p.phone,groupName:g.name,childId:"",isChild:false});
    }
-
    p.children.forEach(c=>{
     const childName=String(c.name||"").toLowerCase();
     const childPhone=String(c.phone||"").toLowerCase();
-
     if(childName.includes(query)||childPhone.includes(query)){
-     searchResults.push({
-      groupId:g.id,personId:p.id,resultName:c.name,resultPhone:c.phone,
-      groupName:g.name,childId:c.id,isChild:true
-     });
+     searchResults.push({groupId:g.id,personId:p.id,resultName:c.name,resultPhone:c.phone,groupName:g.name,childId:c.id,isChild:true});
     }
    });
   }));
@@ -1025,7 +882,6 @@ function renderSearchPanel(){
  }else{
   const history=getSearchHistory();
   searchResults=[];
-
   panel.innerHTML=history.length?
    '<div class="search-heading">عمليات البحث السابقة</div>'+
    history.map((item,i)=>`
@@ -1038,7 +894,6 @@ function renderSearchPanel(){
    `).join("")
    :'<div class="search-empty">ما فيه عمليات بحث سابقة</div>';
  }
-
  panel.classList.add("show");
 }
 
@@ -1069,44 +924,32 @@ function submitSearch(){
  const input=document.getElementById("searchInput");
  const query=input.value.trim();
  if(!query)return;
-
  addSearchHistory(query);
  renderSearchPanel();
-
  if(searchResults.length===1)openSearchResult(0);
 }
 
 function openSearchResult(index){
  const result=searchResults[index];
  if(!result)return;
-
  const input=document.getElementById("searchInput");
  addSearchHistory(input.value.trim());
-
  active=result.groupId;
  expanded[result.personId]=true;
  highlightPersonId=result.personId;
-
  if(highlightTimer)clearTimeout(highlightTimer);
-
  input.value="";
  searchFocused=false;
  document.getElementById("searchPanel").classList.remove("show");
  searchResults=[];
-
  groupFilters[result.groupId]="all";
-
  render();
 
  requestAnimationFrame(()=>{
   const target=document.getElementById("person-"+result.personId);
   if(target)target.scrollIntoView({behavior:"smooth",block:"center"});
  });
-
- highlightTimer=setTimeout(()=>{
-  highlightPersonId="";
-  render();
- },3000);
+ highlightTimer=setTimeout(()=>{highlightPersonId="";render()},3000);
 }
 
 document.addEventListener("click",function(event){
@@ -1117,22 +960,16 @@ document.addEventListener("click",function(event){
  }
 });
 
-function privateText(id,value){
- return revealed[id]===false?"****":safe(value);
-}
+function privateText(id,value){return revealed[id]===false?"****":safe(value)}
 
-function callButton(id,phone){
+function callButton(id,phone,isChild=false){
  if(revealed[id]===false)return "";
-
  const number=String(phone||"").replace(/[^0-9]/g,"");
  if(!number)return "";
-
  return `
-  <a class="call"
-   href="tel:${safe(number)}"
-   onclick="prepareCall('${id}')"
-   title="اتصال"
-   aria-label="اتصال">
+  <a class="call" href="tel:${safe(number)}"
+   onclick="${isChild?`prepareChildCall('${id}')`:`prepareCall('${id}')`}"
+   title="اتصال" aria-label="اتصال">
    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M7.2 3.5H5.4C4.35 3.5 3.5 4.35 3.5 5.4
     C3.5 13.74 10.26 20.5 18.6 20.5
@@ -1140,8 +977,7 @@ function callButton(id,phone){
     L15.9 14.9L13.8 17
     C10.8 15.9 8.1 13.2 7 10.2
     L9.1 8.1L7.2 3.5Z"
-    stroke="currentColor" stroke-width="1.7"
-    stroke-linecap="round" stroke-linejoin="round"/>
+    stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
    </svg>
   </a>
  `;
@@ -1149,6 +985,14 @@ function callButton(id,phone){
 
 function prepareCall(id){
  pendingCallId=id;
+ pendingCallIsChild=false;
+ callPageWasHidden=false;
+ callResultShown=false;
+}
+
+function prepareChildCall(id){
+ pendingCallId=id;
+ pendingCallIsChild=true;
  callPageWasHidden=false;
  callResultShown=false;
 }
@@ -1156,60 +1000,53 @@ function prepareCall(id){
 function showCallResult(){
  if(!pendingCallId||callResultShown)return;
  callResultShown=true;
-
  const id=pendingCallId;
+
+ if(pendingCallIsChild){
+  showModal(`
+   <h3>انتهى الاتصال</h3>
+   <p>تم الرجوع من الاتصال بالاسم التابع.</p>
+   <button class="save" style="width:100%" onclick="closeChildCall()">حسنًا</button>
+  `);
+  return;
+ }
 
  showModal(`
   <h3>وش نتيجة الاتصال؟</h3>
   <p>اختر النتيجة بعد انتهاء المكالمة:</p>
   <div class="modal-actions">
-   <button class="save" onclick="saveCallResult('${id}',1)">
-    ✓ تم الرد
-   </button>
-   <button class="cancel" onclick="saveCallResult('${id}',2)">
-    − لم يرد
-   </button>
+   <button class="save" onclick="saveCallResult('${id}',1)">✓ تم الرد</button>
+   <button class="cancel" onclick="saveCallResult('${id}',2)">− لم يرد</button>
   </div>
-  <button class="cancel" style="width:100%;margin-top:8px"
-   onclick="saveCallResult('${id}',0)">
-   لم يتم التواصل
-  </button>
+  <button class="cancel" style="width:100%;margin-top:8px" onclick="saveCallResult('${id}',0)">لم يتم التواصل</button>
  `);
+}
+
+function closeChildCall(){
+ pendingCallId="";
+ pendingCallIsChild=false;
+ callPageWasHidden=false;
+ callResultShown=false;
+ closeModal();
 }
 
 function saveCallResult(id,value){
  let found=null;
  let foundGroup=null;
-
  for(const g of groups){
   const p=g.people.find(x=>x.id===id);
-  if(p){
-   found=p;
-   foundGroup=g;
-   break;
-  }
+  if(p){found=p;foundGroup=g;break}
  }
-
- if(!found){
-  closeModal();
-  pendingCallId="";
-  return;
- }
-
+ if(!found){closeModal();pendingCallId="";return}
  found.status=value;
-
  if(value===1&&foundGroup){
   const index=foundGroup.people.findIndex(x=>x.id===id);
-  if(index!==-1){
-   const person=foundGroup.people.splice(index,1)[0];
-   foundGroup.people.push(person);
-  }
+  if(index!==-1){const person=foundGroup.people.splice(index,1)[0];foundGroup.people.push(person)}
  }
-
  pendingCallId="";
+ pendingCallIsChild=false;
  callPageWasHidden=false;
  callResultShown=false;
-
  closeModal();
  render();
  persist();
@@ -1217,70 +1054,49 @@ function saveCallResult(id,value){
 
 document.addEventListener("visibilitychange",()=>{
  if(!pendingCallId)return;
-
- if(document.hidden){
-  callPageWasHidden=true;
- }else if(callPageWasHidden){
-  setTimeout(showCallResult,500);
- }
+ if(document.hidden){callPageWasHidden=true}
+ else if(callPageWasHidden){setTimeout(showCallResult,500)}
 });
 
 window.addEventListener("focus",()=>{
- if(pendingCallId&&callPageWasHidden){
-  setTimeout(showCallResult,500);
- }
+ if(pendingCallId&&callPageWasHidden)setTimeout(showCallResult,500);
 });
 
 function eyeButton(id){
  return `<button class="eye" onclick="toggleEye('${id}')" title="إظهار أو إخفاء البيانات">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-   stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
    <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/>
    <circle cx="12" cy="12" r="3"/>
   </svg>
  </button>`;
 }
 
-function toggleEye(id){
- revealed[id]=revealed[id]===false;
- render();
-}
+function toggleEye(id){revealed[id]=revealed[id]===false;render()}
 
 function statusButton(id,value,isChild=false){
  const data=isChild?childStatuses:parentStatuses;
  const s=data[value]||data[0];
-
  return `<div class="status-box">
   <button class="status ${s.cls}" onclick="toggleStatus('${id}')">${s.text}</button>
   <div class="status-list" id="status-${id}">
-   ${data.map((x,i)=>
-    `<button onclick="setStatus('${id}',${i},${isChild})">${x.text}</button>`
-   ).join("")}
+   ${data.map((x,i)=>`<button onclick="setStatus('${id}',${i},${isChild})">${x.text}</button>`).join("")}
   </div>
  </div>`;
 }
 
-function selectGroup(id){
- active=id;
- render();
-}
+function selectGroup(id){active=id;render()}
 
 function addPersonToGroup(groupId){
  const group=groups.find(g=>g.id===groupId);
  if(!group)return;
-
  if(personFormGroupId===groupId){
   const form=document.getElementById("personForm");
-  if(form.classList.contains("show")){
-   form.classList.remove("show");
-   return;
-  }
+  if(form.classList.contains("show")){form.classList.remove("show");return}
  }else{
   personFormGroupId=groupId;
   document.getElementById("personName").value="";
   document.getElementById("personPhone").value="";
  }
-
  active=groupId;
  render();
  document.getElementById("personForm").classList.add("show");
@@ -1289,45 +1105,24 @@ function addPersonToGroup(groupId){
 
 function favorite(id){
  const p=current().people.find(x=>x.id===id);
- if(p){
-  p.favorite=!p.favorite;
-  render();
-  persist();
- }
+ if(p){p.favorite=!p.favorite;render();persist()}
 }
 
-function toggleChildren(id){
- expanded[id]=!expanded[id];
- render();
-}
+function toggleChildren(id){expanded[id]=!expanded[id];render()}
 
 function toggleStatus(id){
  const menu=document.getElementById("status-"+id);
  if(!menu)return;
-
- document.querySelectorAll(".status-list").forEach(x=>{
-  if(x!==menu)x.classList.remove("show");
- });
-
+ document.querySelectorAll(".status-list").forEach(x=>{if(x!==menu)x.classList.remove("show")});
  menu.classList.toggle("show");
 }
 
 function setStatus(id,value,isChild){
  for(const g of groups)for(const p of g.people){
-  if(!isChild&&p.id===id){
-   p.status=value;
-   render();
-   persist();
-   return;
-  }
+  if(!isChild&&p.id===id){p.status=value;render();persist();return}
   if(isChild){
    const c=p.children.find(x=>x.id===id);
-   if(c){
-    c.status=value;
-    render();
-    persist();
-    return;
-   }
+   if(c){c.status=value;render();persist();return}
   }
  }
 }
@@ -1348,28 +1143,21 @@ function saveGroup(){
  const input=document.getElementById("newGroupName");
  const name=input.value.trim();
  if(!name){input.focus();return}
-
  const group=newGroup(name);
  groups.push(group);
  active=group.id;
  groupFilters[group.id]="all";
-
- closeModal();
- render();
- persist();
+ closeModal();render();persist();
 }
 
 function askDeleteGroup(groupId){
  const group=groups.find(g=>g.id===groupId);
  if(!group)return;
-
  if(groups.length===1){
   showModal('<h3>تنبيه</h3><p>لازم تخلي مجموعة واحدة على الأقل.</p><button class="dark" onclick="closeModal()">حسنًا</button>');
   return;
  }
-
  deleteGroupId=groupId;
-
  showModal(`
   <h3>حذف المجموعة</h3>
   <p>متأكد تبي تحذف مجموعة «${safe(group.name)}» وكل الأسماء الموجودة فيها؟</p>
@@ -1383,17 +1171,12 @@ function askDeleteGroup(groupId){
 function confirmDeleteGroup(){
  const removedId=deleteGroupId;
  if(!removedId)return;
-
  groups=groups.filter(g=>g.id!==removedId);
  delete groupFilters[removedId];
-
  if(active===removedId)active=groups[0].id;
  if(personFormGroupId===removedId)closePersonForm();
-
  deleteGroupId="";
- closeModal();
- render();
- persist();
+ closeModal();render();persist();
 }
 
 function openPersonForm(){
@@ -1412,32 +1195,13 @@ function closePersonForm(){
 function savePerson(){
  const name=document.getElementById("personName").value.trim();
  const phone=document.getElementById("personPhone").value.trim();
-
- if(!name||!phone){
-  alert("اكتب الاسم ورقم الجوال");
-  return;
- }
-
- if(!/^[0-9]+$/.test(phone)){
-  alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");
-  return;
- }
-
+ if(!name||!phone){alert("اكتب الاسم ورقم الجوال");return}
+ if(!/^[0-9]+$/.test(phone)){alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");return}
  const targetGroup=groups.find(g=>g.id===(personFormGroupId||active));
- if(!targetGroup){
-  alert("المجموعة غير موجودة");
-  return;
- }
-
- targetGroup.people.unshift({
-  id:uid(),name,phone,status:0,favorite:false,children:[]
- });
-
+ if(!targetGroup){alert("المجموعة غير موجودة");return}
+ targetGroup.people.unshift({id:uid(),name,phone,status:0,favorite:false,children:[]});
  active=targetGroup.id;
- closePersonForm();
- render();
- persist();
- showSuccessToast();
+ closePersonForm();render();persist();showSuccessToast();
 }
 
 let deletePersonId="",deleteChildId="";
@@ -1452,39 +1216,21 @@ function confirmDeletePerson(){
  delete expanded[deletePersonId];
  delete revealed[deletePersonId];
  if(editingPersonId===deletePersonId)editingPersonId="";
- closeModal();
- render();
- persist();
+ closeModal();render();persist();
 }
 
-function openChildForm(id){
- document.getElementById("childForm-"+id)?.classList.add("show");
-}
-
-function closeChildForm(id){
- document.getElementById("childForm-"+id)?.classList.remove("show");
-}
+function openChildForm(id){document.getElementById("childForm-"+id)?.classList.add("show")}
+function closeChildForm(id){document.getElementById("childForm-"+id)?.classList.remove("show")}
 
 function saveChild(id){
  const p=current().people.find(x=>x.id===id);
  if(!p)return;
-
  const name=document.getElementById("childName-"+id).value.trim();
  const phone=document.getElementById("childPhone-"+id).value.trim();
-
- if(!name||!phone){
-  alert("اكتب الاسم ورقم الجوال");
-  return;
- }
-
- if(!/^[0-9]+$/.test(phone)){
-  alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");
-  return;
- }
-
+ if(!name||!phone){alert("اكتب الاسم ورقم الجوال");return}
+ if(!/^[0-9]+$/.test(phone)){alert("رقم الجوال لازم يكون بالأرقام الإنجليزية فقط (0-9)");return}
  p.children.push({id:uid(),name,phone,status:0});
- render();
- persist();
+ render();persist();
 }
 
 function askDeleteChild(id){
@@ -1497,9 +1243,8 @@ function confirmDeleteChild(){
   p.children=p.children.filter(c=>c.id!==deleteChildId);
  }
  delete revealed[deleteChildId];
- closeModal();
- render();
- persist();
+ if(editingChildId===deleteChildId)editingChildId="";
+ closeModal();render();persist();
 }
 
 function showModal(html){
@@ -1524,10 +1269,7 @@ function askConfirm(message,action){
 }
 
 db.auth.getSession().then(async({data,error})=>{
- if(error){
-  showMessage(error.message,true);
-  return;
- }
+ if(error){showMessage(error.message,true);return}
  if(data.session)await enterApp(data.session.user);
 });
 
